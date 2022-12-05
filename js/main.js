@@ -18,18 +18,18 @@ function renderProtfolios() {
 
         return `<div class="col-md-4 col-sm-6 portfolio-item">
                     <a class="portfolio-link ${id}" data-toggle="modal" href="#portfolioModal">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-hover-content">
-                    <i class="fa fa-plus fa-3x"></i>
+                        <div class="portfolio-hover bg-danger">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="img/portfolio/${id}.png" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>${name}</h4>
+                        <p class="text-muted">${title}</p>
                     </div>
-                </div>
-            <img class="img-fluid" src="img/portfolio/${id}.png" alt="">
-          </a>
-          <div class="portfolio-caption">
-            <h4>${name}</h4>
-            <p class="text-muted">${title}</p>
-          </div>
-        </div>`
+                </div>`
     })
     console.log(strHTMLs)
     $('.port-content').html(strHTMLs)
@@ -64,12 +64,16 @@ function setSubmitMailClick(){
 }
 
 function onOpanMailTab(){
-    const mail = $('.contact .e-mail').value()
-    const sub = $('.contact .subject').value()
-    const content = $('.contact textarea').value()
+    // const mail = $('.contact .e-mail').val()
+    const sub = $('.contact .subject').val()
+    const content = $('.contact textarea').val()
 
-    const queryStringParams = `&to=${MY_MAIL}&su=${sub}&body=${content}`
+    const queryStringParams = `https://mail.google.com/mail/?view=cm&fs=1&to=${MY_MAIL}&su=${sub}&body=${content}`
+    window.open(queryStringParams, '_blank')
+    $('.contact .e-mail').val('')
+    $('.contact .subject').val('')
+    $('.contact textarea').val('')
 }
 
-https://mail.google.com/mail/?view=cm&fs=1&to={me@example.com}&su={SUBJECT}&b ody={BODY}
+
 

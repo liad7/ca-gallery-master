@@ -25,7 +25,7 @@ h6 {
     text-transform: uppercase;
 }
 section {
-    padding: 100px 0;
+    padding: 100px 4vw;
 }
 section h2.section-heading {
     font-size: 40px;
@@ -42,7 +42,7 @@ section h3.section-subheading {
 }
 @media (min-width: 768px) {
     section {
-        padding: 150px 0;
+        padding: 150px 2vw;
     }
 }
 ::-moz-selection {
@@ -84,7 +84,7 @@ body {
 .offcanvas-aside {
     position: fixed;
     height: 100%;
-    background: red;
+    background: rgba(117, 233, 212, 0.937);
     width: 80vw;
     right: -80vw;
     z-index: 10;
@@ -190,7 +190,7 @@ body {
 header.masthead {
     text-align: center;
     color: white;
-    background-image: url("../img/header-bg.jpg");
+    background-image: url("../img/header.png");
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
