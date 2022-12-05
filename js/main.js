@@ -25,9 +25,9 @@ function renderProtfolios() {
                         </div>
                         <img class="img-fluid" src="img/portfolio/${id}.png" alt="">
                     </a>
-                    <div class="portfolio-caption">
-                        <h4>${name}</h4>
-                        <p class="text-muted">${title}</p>
+                    <div class="portfolio-caption bg-secondary">
+                        <h4 class="text-light">${name}</h4>
+                        <p class="text-warning">${title}</p>
                     </div>
                 </div>`
     })
