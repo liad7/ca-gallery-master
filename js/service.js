@@ -1,11 +1,14 @@
 'use strict'
 
+const MONTHs = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+
 var gProjs = [
     {
     id: "mine-sweeper",
     name: "Mine-Sweeper",
     title: "Try Not To Bomb",
-    desc: "lorem ipsum lorem ipsum lorem ipsum", url: "https://liad7.github.io/mine-sweeper1/",
+    desc: "lorem ipsum lorem ipsum lorem ipsum", 
+    url: "https://liad7.github.io/mine-sweeper1/",
     publishedAt: 1448693940000,
     labels: ["Matrixes", "keyboard events"]
 },
@@ -13,7 +16,8 @@ var gProjs = [
     id: "touch-nums",
     name: "Touch-Nums",
     title: "Beat The Clock",
-    desc: "lorem ipsum lorem ipsum lorem ipsum", url: "https://liad7.github.io/Touch-Nums/",
+    desc: "lorem ipsum lorem ipsum lorem ipsum", 
+    url: "https://liad7.github.io/Touch-Nums/",
     publishedAt: 1448693940000,
     labels: ["Matrixes"]
 },
@@ -21,7 +25,8 @@ var gProjs = [
     id: "in-picture",
     name: "In-Picture",
     title: "Fun Actors Quiz",
-    desc: "lorem ipsum lorem ipsum lorem ipsum", url: "https://liad7.github.io/In-Picture/",
+    desc: "lorem ipsum lorem ipsum lorem ipsum", 
+    url: "https://liad7.github.io/In-Picture/",
     publishedAt: 1448693940000,
     labels: []
 },
@@ -29,7 +34,8 @@ var gProjs = [
     id: "chess",
     name: "Chess",
     title: "Kings\' Game",
-    desc: "lorem ipsum lorem ipsum lorem ipsum", url: " https://liad7.github.io/Chess/",
+    desc: "lorem ipsum lorem ipsum lorem ipsum", 
+    url: " https://liad7.github.io/Chess/",
     publishedAt: 1448693940000,
     labels: ["Matrixes"]
 },
@@ -37,7 +43,8 @@ var gProjs = [
     id: "ball-game",
     name: "Ball-Game",
     title: "Collects The Balls",
-    desc: "lorem ipsum lorem ipsum lorem ipsum", url: "https://liad7.github.io/Ball-Game/",
+    desc: "lorem ipsum lorem ipsum lorem ipsum", 
+    url: "https://liad7.github.io/Ball-Game/",
     publishedAt: 1448693940000,
     labels: ["Matrixes", "keyboard events"]
 },
@@ -45,7 +52,8 @@ var gProjs = [
     id: "pacman",
     name: "Pacman",
     title: "Mind The Ghosts",
-    desc: "lorem ipsum lorem ipsum lorem ipsum", url: "https://liad7.github.io/Pacman/",
+    desc: "lorem ipsum lorem ipsum lorem ipsum", 
+    url: "https://liad7.github.io/Pacman/",
     publishedAt: 1448693940000,
     labels: ["Matrixes", "keyboard events"]
 },
@@ -53,6 +61,21 @@ var gProjs = [
 
 function getProjs(){
     return gProjs
+}
+
+function getMonthName(idx){
+    return MONTHs[idx]
+}
+
+function getDispalyDate(now){
+    var d = new Date(now)
+    var month = getMonthName(d.getMonth())
+    var year = d.getFullYear()
+    return month + ' ' + year
+}
+
+function getProjById(id){
+    return gProjs.find(proj => proj.id === id)
 }
 
 
